@@ -1,0 +1,362 @@
+%Adapted from CV template by Sourabh Bajaj on ShareLaTeX
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[left=0.625in,right=0.625in,bottom=0.625in,top=0.5in,includefoot]{geometry}
+\usepackage{latexsym}
+%\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[leftmargin=11pt,labelsep=2pt,topsep=0pt,itemsep=0pt,
+			partopsep=0pt,parsep=0pt]{etaremune} 				% For publication list
+%\usepackage{charter} %Charter font
+%\usepackage[charter]{mathdesign} %Charter math (for kappa)
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{sansmathfonts} %For Computer Modern sans serif
+\renewcommand{\familydefault}{\sfdefault}	
+
+%\geometry{left=0.625in,right=0.625in,bottom=0.625in,top=0.5in}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.375in}
+%\addtolength{\evensidemargin}{-0.375in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{ #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\eduSubheading}[6]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%---------------------------------------------------------------------%
+%---------------------- CV STARTS HERE  -------------------%
+%---------------------------------------------------------------------%
+
+
+\begin{document}
+\fancyfoot[L]{Emmett M. Leddin}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Last Updated: \today}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Emmett M. Leddin}} & Email: \href{mailto:EmmettLeddin@my.unt.edu}{EmmettLeddin@my.unt.edu}\\
+  \\
+\end{tabular*}
+  \href{https://chemistry.unt.edu}{University of North Texas, Department of Chemistry, 1508 W. Mulberry Street, Denton, TX 76203}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of North Texas}{Denton, TX}
+      {Ph.D. Candidate in Physical Chemistry}{August 2017 -- Present}
+    \eduSubheading
+      {Truman State University}{Kirksville, MO}
+      {B.S. in Chemistry (ACS Certified)}{August 2013 -- May 2017}
+      {B.A. in Psychology}{August 2013 -- May 2017}
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Graduate Research Assistant}{Denton, TX}
+      {University of North Texas}{August 2017 -- Present}
+      \resumeItemListStart
+        \resumeItem{Advisor\textnormal{:}}
+          {Dr. G. Andr\'{e}s Cisneros}
+        \resumeItem{\textnormal{Performed molecular dynamics simulations with DNA polymerase $\kappa$ and TET2}}
+          {}
+        \resumeItem{\textnormal{Parameterized non-standard nucleic acids}}
+          {}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Research Assistant}{Kirksville, MO}
+      {Truman State University}{November 2015 -- May 2017}
+      \resumeItemListStart
+        \resumeItem{Advisor\textnormal{:}}
+          {Dr. Bill R. Miller III}
+        \resumeItem{\textnormal{Performed molecular dynamics simulations with APOBEC3B and APOBEC3G}}
+          {}
+        \resumeItem{\textnormal{Docked ligands to APOBEC3B to screen for potential inhibitors}}
+          {}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  
+%--------PUBLICATIONS------------
+\section{Publications}
+\begin{etaremune}
+\small
+  % Accepted May 2019
+  \item \href{https://doi.org/10.1016/bs.apcsb.2019.05.002}{Leddin, E. M.; Cisneros, G. A. Comparison of DNA and RNA Substrate Effects on TET2 Structure. \textit{APCSB} \textbf{2019}, accepted, DOI: https://doi.org/10.1016/bs.apcsb.2019.05.002.}
+  % Nov 2, 2018
+  \item \href{https://pubs.acs.org/doi/10.1021/acs.biochem.8b00912}{DeNizio, J. E.; Liu, M. Y.; Leddin, E. M.; Cisneros, G. A.; Kohli, R. M. Selectivity and Promiscuity in TET-mediated oxidation of 5-methylcytosine in DNA and RNA. \textit{Biochemistry} \textbf{2019}, \textit{58}, 411-421.}
+% July 13, 2018
+  \item \href{https://pubs.acs.org/doi/abs/10.1021/acs.chemrestox.8b00055}{Antczak, N. M.; Walker, A. R.; Stern, H. R.; Leddin, E. M.; Palad, C.; Coulther, T. A.; Swett, R.; Cisneros, G. A.; Beuning, P. J. Characterization of nine cancer-associated variants in human Pol $\kappa$. \textit{Chem. Res. Toxicol.} \textbf{2018}, \textit{31}, 697-711.}
+\normalsize
+\end{etaremune}
+
+%-----------AWARDS AND HONORS-----------------
+\section{Awards and Honors}
+  \resumeSubHeadingListStart
+   \resumeSubItem{Honorable Mention from the Graduate Research Fellowship Program\textnormal{,}}
+      {National Science Foundation (2019)}
+    \resumeSubItem{Outstanding Service and Leadership Award\textnormal{,}}
+      {Truman State University Chemistry Department (2017)}
+    \resumeSubItem{Distinguished Service Key\textnormal{,}}
+      {Alpha Phi Omega - Epsilon Chapter (2017)}
+    \resumeSubItem{Gold Sash Award\textnormal{,}}
+      {Alpha Phi Omega - Epsilon Chapter (2016)}
+    \resumeSubItem{President's Volunteer Service Gold Award\textnormal{,}}
+      {Points of Light Institute (2016)}
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Teaching Assistant}{Denton, TX}
+      {University of North Texas}{August 2017 -- May 2018}
+      \resumeItemListStart
+        \resumeItem{General Chemistry Lab Preparation\textnormal{:}}
+          {Worked on a six-person team to prepare general chemistry experiments \\ and disposed of hazardous waste in accordance with state and federal guidelines}
+        \resumeItem{Computational Chemistry Instructional Laboratory\textnormal{:}}
+          {Answered student computer questions, provided software \\instruction, and managed printing requests}
+      \resumeItemListEnd
+
+%----------------PAGE BREAK--------------------
+\newpage
+\fancyfoot[L]{Emmett M. Leddin}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Last Updated: \today}
+%------------------------------------------------------
+
+    \resumeSubheading
+      {Introduction to Chemistry Preceptor}{Kirksville, MO}
+      {Joseph Baldwin Academy}{June 2016 \& June 2017}
+      \resumeItemListStart
+        \resumeItem{\textnormal{Assisted professors with instruction and led nightly study hall for 24 students}}
+          {}
+        \resumeItem{\textnormal{Enforced Academy regulations with over 200 7th-9th grade students to ensure safety}}
+          {}
+        \resumeItem{\textnormal{Participated in daily staff meetings and worked in a team environment}}
+          {}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE, CONT-----------------
+
+\section{Professional Experience, Continued}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Biochemistry Teaching Assistant}{Kirksville, MO}
+      {Truman State University}{January 2017 -- May 2017}
+      \resumeItemListStart
+        \resumeItem{\textnormal{Prepared experiment materials, including DNA and protein gels and buffer solutions}}
+          {}
+        \resumeItem{\textnormal{Instructed students in laboratory techniques, including pipetting and running gels}}
+          {}
+        \resumeItem{\textnormal{Graded laboratory quizzes}}
+          {}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Academic Trainer}{Kirksville, MO}
+      {STEP Scholars Program}{August 2016 -- May 2017}
+      \resumeItemListStart
+        \resumeItem{\textnormal{Assisted students with learning and comprehending new material}}
+          {}
+        \resumeItem{\textnormal{Tailored instruction to fit individual learning styles}}
+          {}
+        \resumeItem{\textnormal{Used collaborative learning techniques with students}}
+          {}
+        \resumeItem{\textnormal{Instructed students in Introduction to Physics and Chemical Principles I}}
+          {}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Student Advisor/Academic Trainer}{Kirksville, MO}
+      {Summer SPECTRA Scholars Program}{May 2015 -- July 2015}
+      \resumeItemListStart
+        \resumeItem{\textnormal{Served as a mentor for 28 incoming undergraduate students}}
+          {}
+        \resumeItem{\textnormal{Fostered a community by addressing student concerns and promoting academic success}}
+          {}
+        \resumeItem{\textnormal{Organized and budgeted for eight weekly events}}
+          {}
+        \resumeItem{\textnormal{Instructed students in Basic Principles of Chemistry, Chemical Principles I, College Algebra, Plane Trigonometry, \\ and Precalculus}}
+          {}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%--------PRESENTATIONS------------
+\section{Presentations}
+\begin{etaremune}
+\small{
+  \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, G. A. Cisneros. \textbf{Presentation}. 52\textsuperscript{nd} Annual DFW/ACS Meeting-in-Miniature, April 27, 2019.}
+  \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, April 2, 2019.}
+  \item \textnormal{``Computational investigation of single nucleotide polymorphisms in human DNA Polymerase $\kappa$.'' E. M. Leddin, A. R. Walker, N. M. Antczak, H. R. Stern, C. Palad, T. A. Coulther, R. J. Swett, P. J. Beuning, G. A. Cisneros. \textbf{Poster, Sci-Mix}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, April 2, 2019.}
+%%%%
+  \item \textnormal{``Investigation of SNPs in DNA Polymerase $\kappa$.'' E. M. Leddin, G. A. Cisneros. \textbf{Presentation}. North Texas and Oklahoma Computational Chemistry Symposium, Denton, TX, January 11, 2019.}
+  \item \textnormal{``Computational investigation of the impact of an RNA base in a TET2-DNA complex.'' E. M. Leddin, G. A. Cisneros. \textbf{Poster}. oSTEM Annual Conference, Houston, TX, November 17, 2018; and NSF CAC Fall IAB Meeting, Denton, TX, October 22, 2018.}
+  \item \textnormal{``Virtual screening of potential inhibitors of APOBEC3B: A promising cancer drug target.'' Z. D. Smith, E. M. Leddin, B. R. Miller III. \textbf{Poster}. ACS Midwest Regional Meeting, Lawrence, KS, October 19, 2017; and MERCURY Conference, Greenville, SC, July 21, 2017.}
+  \item \textnormal{``Campus climate for the LGBTQ+ community at Truman State University.'' E. M. Leddin, T. Palmer. \textbf{Poster}. Psychology Capstone Presentation at Truman State University, May 2, 2017.}
+  \item \textnormal{``Computational analysis of the movement and inhibition of APOBEC3B.'' E. M. Leddin, B. R. Milller III. \textbf{Presentation}. Truman State University Student Research Conference, April 20, 2017; and National Conference on Undergraduate Research, Memphis, TN, April 8, 2017.}
+  \item \textnormal{``Do you believe in the power of entropy?'' E. M. Leddin, J. M. McCormick. \textbf{Presentation}. Truman State University Student Research Conference, April 20, 2017.}
+  \item \textnormal{``Mental health of students and attitudes about University Counseling Services at Truman State University.'' E. M. Leddin, T. D. Paino. \textbf{Poster}. Truman State University Student Research Conference, April 19, 2016.}
+  }
+\end{etaremune}
+  
+%-----------VOLUNTEER EXPERIENCE-----------------
+\section{Volunteer Experience}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {Crisis Counselor}{New York, NY (online)}
+      {Crisis Text Line}{June 2018 -- present}
+      \resumeItemListStart
+        \resumeItem{\textnormal{Helped guide texters from place of immediate crisis to a calm state}}
+          {}
+        \resumeItem{\textnormal{Counseled clients experiencing suicidal ideation, depression, stress, abuse, and more}}
+          {}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Crisis Hotline Volunteer}{Kirksville, MO}
+      {Victim Support Services}{August 2014 -- May 2017}
+      \resumeItemListStart
+        \resumeItem{\textnormal{Answered calls to the crisis hotline and provided clients with referrals for services}}
+          {}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  
+ %--------SKILLS-----------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Computer-Based:}
+      {Proficient with AMBER19, Avogadro, ChemDraw, Gaussian16, Gnuplot, iBabel, LoggerPro, UCSF Chimera, Visual Molecular Dynamics, \LaTeX, and Windows, Mac, and Linux Operating Systems. Familiar with Gimp, ImageJ, PyRx, Python, R, and Mathematica. }
+    \resumeSubItem{Lab-Based:}
+      {Proficient with gel electrophoresis and titration. Familiar with Fourier-Transform Infrared, Gas Chromatograph-Mass Spectroscopy, High Performance Liquid Chromatography, \textsuperscript{1}H and \textsuperscript{13}C Nuclear Magnetic Resonance Spectroscopy, Schlenk Lines, Thin Layer Chromatography, and UV-Vis Spectrometry.}
+  \resumeSubHeadingListEnd
+
+%--------ACTIVITIES-----------
+\section{Activities and Professional Organizations}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Alpha Chi Sigma}
+      {Professional Chemistry Fraternity (2014 -- Present)}
+            \resumeItemListStart
+        \resumeItem{Chemistry Tutor\textnormal{:}}
+          {Instructed students in CHEM 100 (Chemistry for Contemporary Living), CHEM 129 (Basic Principles of Chemistry), CHEM 130 (Chemical Principles I), CHEM 131 (Chemical Principles II), CHEM 222 (Introduction to Quantitative Analysis), CHEM 329 (Organic Chemistry I), CHEM 331 (Organic Chemistry II), and CHEM 335 (Biochemistry I: Structure and Function)}
+      \resumeItemListEnd
+    \resumeSubItem{American Chemical Society}
+      {(2013 -- Present)}
+            \resumeItemListStart
+        \resumeItem{Musical Demo Show Co-Chair\textnormal{:}}
+          {Coordinated the 2016 Musical Demo Show, an annual event for young children which sets chemical demonstrations to music}
+      \resumeItemListEnd
+    \resumeSubItem{Alpha Phi Omega}
+      {Service Fraternity (2014 -- Present)}
+            \resumeItemListStart
+        \resumeItem{Regional Conference Public Relations Chair\textnormal{:}}
+          {Contacted regional members, maintained several social media profiles, and created promotional materials}
+        \resumeItem{First Vice President of Large Service\textnormal{:}}
+          {Planned a spring break trip for 17 people and other large-scale community service events, including and a community-wide spaghetti dinner}
+        \resumeItem{Sergeant-at-Arms\textnormal{:}}
+          {Proposed over 30 approved changes to the organization bylaws and maintained order at meetings}
+        \resumeItem{Inter-chapter Relations Chair\textnormal{:}}
+          {Arranged group travel to the 2016 National Convention and promoted events with other chapters in our section.}
+      \resumeItemListEnd
+    \resumeSubItem{Civil Air Patrol}
+      {(2011 -- Present)}
+   \resumeSubItem{Out in Science, Technology, Engineering, and Mathematics (oSTEM)}
+      {(2018 -- Present)}
+            \resumeItemListStart
+        \resumeItem{Chapter President\textnormal{:}}
+          {Conducted weekly meetings, maintained the organization's email and Twitter accounts, and created advertisements}
+      \resumeItemListEnd
+    \resumeSubItem{Sigma Xi}
+      {Associate Member (2019 -- Present)}
+    \resumeSubItem{Society for Applied Spectroscopy}
+      {(2013 -- Present)}
+  \resumeSubHeadingListEnd
+  
+%--------PROFESSIONAL DEVELOPMENT COURSEWORK-----------
+\section{Professional Development Coursework}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Software Summer School\textnormal{,}}
+      {Molecular Sciences Software Institute (July 2019)}
+    \resumeSubItem{Graduate Student Teaching Excellence Program\textnormal{,}}
+      {University of North Texas Center for Learning Enhancement, Assessment, and Redesign (Fall 2018)}
+    \resumeSubItem{Adult and Pediatric AED, CPR, and First Aid Certification\textnormal{,}}
+      {American Red Cross (September 2017)}
+    \resumeSubItem{Teaching Excellence Seminar\textnormal{,}}
+      {University of North Texas (August 2017)}
+    \resumeSubItem{Mental Health First Aid Certification\textnormal{,}}
+      {National Council for Behavioral Health (April 2017)}
+    \resumeSubItem{Safe Zone Training\textnormal{,}}
+      {Truman State University (March 2016)}
+    \resumeSubItem{Master Tutoring Workshop\textnormal{,}}
+      {Truman State University (January 2015)}
+  \resumeSubHeadingListEnd
+
+\end{document}
