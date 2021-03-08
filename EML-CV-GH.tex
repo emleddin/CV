@@ -111,6 +111,7 @@
       {B.A. in Psychology}{August 2013 -- May 2017}
   \resumeSubHeadingListEnd
 
+
 %-----------RESEARCH EXPERIENCE-----------------
 \section{Research Experience}
   \resumeSubHeadingListStart
@@ -121,9 +122,11 @@
       \resumeItemListStart
         \resumeItem{Advisor\textnormal{:}}
           {Dr. G. Andr\'{e}s Cisneros}
-        \resumeItem{\textnormal{Performed molecular dynamics simulations with DNA polymerase $\kappa$ and TET2}}
+        \resumeItem{\textnormal{Performed molecular dynamics simulations with DNA polymerase $\kappa$, TET2, HRP, and RdRp}}
           {}
-        \resumeItem{\textnormal{Parameterized non-standard nucleic acids}}
+        \resumeItem{\textnormal{Parameterized non-standard nucleic acids and small ligands}}
+          {}
+        \resumeItem{\textnormal{Optimized protein complexes using quantum mechanics/molecular mechanics}}
           {}
         \resumeItem{\textnormal{Maintained computational resources (13 workstations and over 150 TB of storage) as systems administrator}}
           {}
@@ -142,23 +145,27 @@
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-  
+
+
 %--------PUBLICATIONS------------
 \section{Publications}
 \begin{etaremune}
-\small
+%\small
   % Accepted May 2019
   \item \href{https://doi.org/10.1016/bs.apcsb.2019.05.002}{Leddin, E. M.; Cisneros, G. A. Comparison of DNA and RNA Substrate Effects on TET2 Structure. In \textit{Advances in Protein Chemistry and Structural Biology};  Karabencheva-Christova, T., Christov, C. Z., Eds.; Academic Press: 2019, pp 91-112.}
   % Nov 2, 2018
   \item \href{https://pubs.acs.org/doi/10.1021/acs.biochem.8b00912}{DeNizio, J. E.; Liu, M. Y.; Leddin, E. M.; Cisneros, G. A.; Kohli, R. M. Selectivity and Promiscuity in TET-mediated oxidation of 5-methylcytosine in DNA and RNA. \textit{Biochemistry} \textbf{2019}, \textit{58}, 411-421.}
 % July 13, 2018
   \item \href{https://pubs.acs.org/doi/abs/10.1021/acs.chemrestox.8b00055}{Antczak, N. M.; Walker, A. R.; Stern, H. R.; Leddin, E. M.; Palad, C.; Coulther, T. A.; Swett, R.; Cisneros, G. A.; Beuning, P. J. Characterization of nine cancer-associated variants in human Pol $\kappa$. \textit{Chem. Res. Toxicol.} \textbf{2018}, \textit{31}, 697-711.}
-\normalsize
+%\normalsize
 \end{etaremune}
+
 
 %-----------AWARDS AND HONORS-----------------
 \section{Awards and Honors}
   \resumeSubHeadingListStart
+   \resumeSubItem{First Place Poster in Community Development and Service Projects\textnormal{,}}
+      {AMSA Convention (2021)}
    \resumeSubItem{First Place Presentation\textnormal{,}}
       {University of North Texas Chemistry Department Graduate Seminar Day (2020)}
    \resumeSubItem{Ed and Julia Hodges Memorial Scholarship\textnormal{,}}
@@ -177,6 +184,24 @@
       {Points of Light Institute (2016)}
   \resumeSubHeadingListEnd
 
+%% NEW PAGE
+%%----------------PAGE BREAK--------------------
+\newpage
+\fancyfoot[L]{Emmett M. Leddin}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Last Updated: \today}
+
+ %--------SKILLS-----------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Computer-Based:}
+      {Proficient with AMBER20; Avogadro; ChemDraw; Gaussian16; Git version control; GitHub project management; Gnuplot; iBabel; LoggerPro; UCSF Chimera; Visual Molecular Dynamics; \LaTeX; Microsoft Word, Excel, and PowerPoint; and Windows, Mac, and Linux Operating Systems. Familiar with CAVER, Gimp, GROMACS, HTML/CSS, ImageJ, Jekyll, LICHEM, PLINK, PyRx, SPSS, TINKER, Python (Matplotlib, MDAnalysis, Numpy, Pandas, ParmEd), R (data.table, tidyverse), and RMarkdown. }
+
+    \resumeSubItem{Lab-Based:}
+      {Proficient with gel electrophoresis and titration. Familiar with Fourier-Transform Infrared, Gas Chromatograph-Mass Spectroscopy, High Performance Liquid Chromatography, \textsuperscript{1}H and \textsuperscript{13}C Nuclear Magnetic Resonance Spectroscopy, Schlenk Lines, Thin Layer Chromatography, and UV-Vis Spectrometry.}
+  \resumeSubHeadingListEnd
+
+
 %-----------PROFESSIONAL EXPERIENCE-----------------
 \section{Professional Experience}
   \resumeSubHeadingListStart
@@ -190,19 +215,12 @@
         \resumeItem{Computational Chemistry Instructional Laboratory\textnormal{:}}
           {Answered student computer questions, provided software \\instruction, and managed printing requests}
       \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-%----------------PAGE BREAK--------------------
-\newpage
-\fancyfoot[L]{Emmett M. Leddin}
-\fancyfoot[C]{\thepage}
-\fancyfoot[R]{Last Updated: \today}
-%------------------------------------------------------
-
-%-----------PROFESSIONAL EXPERIENCE, CONT-----------------
-
-\section{Professional Experience, Continued}
-  \resumeSubHeadingListStart
+%  \resumeSubHeadingListEnd
+%
+%%-----------PROFESSIONAL EXPERIENCE, CONT-----------------
+%
+%\section{Professional Experience, Continued}
+%  \resumeSubHeadingListStart
     \resumeSubheading
       {Introduction to Chemistry Preceptor}{Kirksville, MO}
       {Joseph Baldwin Academy}{June 2016 \& June 2017}
@@ -257,16 +275,34 @@
 
   \resumeSubHeadingListEnd
 
-%--------PRESENTATIONS------------
-\section{Presentations}
-\begin{etaremune}
+%--------Academic PRESENTATIONS------------
+\section{Academic Presentations}
+\begin{etaremune}[start=13]
 \small{
+  \item \textnormal{``Impact of Nucleic Acid Backbone Composition on TET2: A Computational Study.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster, Sci-Mix}. \href{https://www.morressier.com/article/impact-nucleic-acid-backbone-composition-tet2-computational-study/5e735fe0cde2b641284a9da2?}{259\textsuperscript{th} American Chemical Society National Meeting \& Exposition}, March 24, 2020 (hosted online due to COVID-19).}
+  \item \textnormal{``Impact of Nucleic Acid Backbone Composition on TET2: A Computational Study.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster}. \href{https://twitter.com/EmLedd1/status/1239679717575360512?s=20}{University of North Texas College of Science Research Day}, March 20, 2020; and \href{https://twitter.com/EmLedd1/status/1234811448720797696?s=20}{Royal Society of Chemistry Twitter Poster Conference}, March 3, 2020.}
   \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, G. A. Cisneros. \textbf{Presentation}. 52\textsuperscript{nd} Annual DFW/ACS Meeting-in-Miniature, April 27, 2019.}
+}
+\end{etaremune}
+
+%% NEW PAGE
+%%----------------PAGE BREAK--------------------
+\newpage
+\fancyfoot[L]{Emmett M. Leddin}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Last Updated: \today}
+
+
+\section{Academic Presentations, Continued}
+\begin{etaremune}[start=10]
+\small{
   \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, April 2, 2019.}
   \item \textnormal{``Computational investigation of single nucleotide polymorphisms in human DNA Polymerase $\kappa$.'' E. M. Leddin, A. R. Walker, N. M. Antczak, H. R. Stern, C. Palad, T. A. Coulther, R. J. Swett, P. J. Beuning, G. A. Cisneros. \textbf{Poster, Sci-Mix}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, April 2, 2019.}
+  \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster}. \href{https://twitter.com/EmLedd1/status/1103107933951459333?s=20}{Royal Society of Chemistry Twitter Poster Conference}, March 5, 2019.}
 %%%%
   \item \textnormal{``Investigation of SNPs in DNA Polymerase $\kappa$.'' E. M. Leddin, G. A. Cisneros. \textbf{Presentation}. North Texas and Oklahoma Computational Chemistry Symposium, Denton, TX, January 11, 2019.}
-  \item \textnormal{``Computational investigation of the impact of an RNA base in a TET2-DNA complex.'' E. M. Leddin, G. A. Cisneros. \textbf{Poster}. oSTEM Annual Conference, Houston, TX, November 17, 2018; and NSF CAC Fall IAB Meeting, Denton, TX, October 22, 2018.}
+  \item \textnormal{``Computational investigation of the impact of an RNA base in a TET2-DNA complex.'' E. M. Leddin, G. A. Cisneros. \textbf{Poster}. 8\textsuperscript{th} Annual oSTEM Conference, Houston, TX, November 17, 2018; and NSF CAC Fall IAB Meeting, Denton, TX, October 22, 2018.}
+%  \item \textnormal{``Computational investigation of cancer-related single nucleotide polymorphisms in TET2.'' P. Camacho, E. M. Leddin, G. A. Cisneros. \textbf{Poster}. SACNAS Conference, San Antonio, TX, October 11, 2018.}
   \item \textnormal{``Virtual screening of potential inhibitors of APOBEC3B: A promising cancer drug target.'' Z. D. Smith, E. M. Leddin, B. R. Miller III. \textbf{Poster}. ACS Midwest Regional Meeting, Lawrence, KS, October 19, 2017; and MERCURY Conference, Greenville, SC, July 21, 2017.}
   \item \textnormal{``Campus climate for the LGBTQ+ community at Truman State University.'' E. M. Leddin, T. Palmer. \textbf{Poster}. Psychology Capstone Presentation at Truman State University, May 2, 2017.}
   \item \textnormal{``Computational analysis of the movement and inhibition of APOBEC3B.'' E. M. Leddin, B. R. Milller III. \textbf{Presentation}. Truman State University Student Research Conference, April 20, 2017; and National Conference on Undergraduate Research, Memphis, TN, April 8, 2017.}
@@ -275,14 +311,28 @@
   }
 \end{etaremune}
 
- %--------SKILLS-----------
-\section{Technical Skills}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Computer-Based:}
-      {Proficient with AMBER19; Avogadro; ChemDraw; Gaussian16; Git version control; GitHub project management; Gnuplot; iBabel; LoggerPro; UCSF Chimera; Visual Molecular Dynamics; \LaTeX; Microsoft Word, Excel, and PowerPoint; and Windows, Mac, and Linux Operating Systems. Familiar with CAVER, Gimp, ImageJ, LICHEM, PLINK, PyRx, SPSS, TINKER, Python (MDAnalysis, Matplotlib, Numpy, ParmEd, Pandas), R (data.table, pandas), and Mathematica. }
-    \resumeSubItem{Lab-Based:}
-      {Proficient with gel electrophoresis and titration. Familiar with Fourier-Transform Infrared, Gas Chromatograph-Mass Spectroscopy, High Performance Liquid Chromatography, \textsuperscript{1}H and \textsuperscript{13}C Nuclear Magnetic Resonance Spectroscopy, Schlenk Lines, Thin Layer Chromatography, and UV-Vis Spectrometry.}
-  \resumeSubHeadingListEnd
+%--------Service and Outreach PRESENTATIONS------------
+\section{Service and Outreach Presentations}
+\begin{etaremune}
+\small{
+%% American Medical Student Association 71st Annual Convention
+  \item \textnormal{``Messages from COVID-19: Operating a Crisis Hotline by People in STEMM with Marginalized Identities'' E. M. Leddin, S. Huard, A. Bryant, N. Juarez, J. Hong, L. Martinez, K. R. Fox. \textbf{Poster}. 26th Annual American Medical Student Association Project, Research, and Experience Exhibition, March 6, 2021.}
+  \item \textnormal{``Following the Yellow-Brick Road to... Graduate School???'' E. M. Leddin. \textbf{Presentation}. Lincoln-Way West Community High School, New Lenox, IL, March 3, 2021.}
+  \item \textnormal{\href{https://twitter.com/ThriveLifeline/status/1366720589130592259?s=20}{``We're Out Here THRIVE-ing: Addressing Mental Health in STEMM.''} E. M. Leddin, S. Huard, A. Bryant, N. Juarez, J. Hong, L. Martinez, K. R. Fox. \textbf{Poster}. Royal Society of Chemistry Twitter Poster Conference, March 2, 2021.}
+  \item \textnormal{\href{https://bit.ly/2020-oSTEM-Ethics}{``Mental Health Interventions for People in STEMM with Marginalized Identities.''} K. R. Fox, S. Huard, E. M. Leddin, L. Martinez, A. Bryant, N. Juarez. \textbf{Poster}. 101\textsuperscript{st} Annual Meeting of the American Meteorological Society, Online, January 14, 2020.}
+  \item \textnormal{\href{https://bit.ly/2020-oSTEM-Ethics}{``Scientific Ethics: How Sex Research, Standardized Testing, and Gifted Programs Are All Tied to Eugenics.''} E. M. Leddin. \textbf{Presentation}. 10\textsuperscript{th} Annual oSTEM + NOGLSTP's Out to Innovate\texttrademark{} Conference, Online, November 14, 2020.}
+  \item \textnormal{``LGBTQ+ Inclusion Round Table.'' \textbf{Panelist}. Alpha Phi Omega Section G-1 \& G-2 Conference, Online, November 8, 2020.}
+  \item \textnormal{\href{https://twitter.com/EmLedd1/status/1234812260515749889?s=20}{``Supporting Trans Students.''} E. M. Leddin. \textbf{Poster}. Royal Society of Chemistry Twitter Poster Conference, March 3, 2020.}
+  \item \textnormal{\href{http://bit.ly/2019-oSTEM-PROF10}{``Research Skills for the Newbie in the Lab.''} E. M. Leddin. \textbf{Presentation}. 9\textsuperscript{th} Annual oSTEM Conference, Detroit, MI, November 16, 2019.}
+\item \textnormal{\href{https://www.youtube.com/watch?v=6VkSUhsZr40&feature=youtu.be}{``Graduate and Professional School Applications.''} E. M. Leddin. \textbf{Presentation}. oSTEM Meeting, Denton, TX, September 23, 2019; and UNT NSF-REU Program, Denton, TX, July, 17 2019.}
+  \item \textnormal{\href{http://bit.ly/2019-UNTREU-CCBC}{``Computational Chemistry Bootcamp.''} E. M. Leddin. \textbf{Presentation}. UNT NSF-REU Program, Denton, TX, June 11, 2019.}
+  \item \textnormal{``The LGBTQ+ community in chemistry -- new frontiers for graduate students and postdoctoral scholars.'' \textbf{Panelist}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, Orlando, FL, April 1, 2019.}
+  \item \textnormal{``The Graduate School Experience: What to Expect'' \textbf{Panelist}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, Orlando, FL, March 31, 2019.}
+  \item \textnormal{ \href{https://docs.google.com/presentation/d/1mKDUxe-elMQ7EkTBglIQBeZlcsdBwmfP5loLxAsshF0/edit}{``Creating Inclusive Environments.''} E. M. Leddin. \textbf{Presentation}. Alpha Phi Omega D-3 Sectional Conference, Denton, TX, March 2, 2019.}
+  \item \textnormal{``Conflict Resolution.'' E. M. Leddin. \textbf{Presentation}. Alpha Phi Omega D-3 Sectional Conference, Denton, TX, March 2, 2019; and Alpha Phi Omega Section 41 Conference, Sherman, TX, April 14, 2018.}
+  }
+\end{etaremune}
+
 
 %--------ACTIVITIES-----------
 \section{Activities and Professional Organizations}
@@ -364,35 +414,20 @@
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%--------Service and Outreach PRESENTATIONS------------
-\section{Service and Outreach Presentations}
-\begin{etaremune}
-\small{
-  \item \textnormal{\href{https://bit.ly/2020-oSTEM-Ethics}{``Scientific Ethics: How Sex Research, Standardized Testing, and Gifted Programs Are All Tied to Eugenics.''} E. M. Leddin. \textbf{Presentation}. 10\textsuperscript{th} Annual oSTEM + NOGLSTP's Out to Innovate\texttrademark{} Conference, Online, November 14, 2020.}
-  \item \textnormal{``LGBTQ+ Inclusion Round Table.'' \textbf{Panelist}. Alpha Phi Omega Section G-1 \& G-2 Conference, Online, November 8, 2020.}
-  \item \textnormal{\href{https://twitter.com/EmLedd1/status/1234812260515749889?s=20}{``Supporting Trans Students.''} E. M. Leddin. \textbf{Poster}. Royal Society of Chemistry Twitter Poster Conference, March 3, 2020.}
-  \item \textnormal{\href{http://bit.ly/2019-oSTEM-PROF10}{``Research Skills for the Newbie in the Lab.''} E. M. Leddin. \textbf{Presentation}. 9\textsuperscript{th} Annual \emph{o}STEM Conference, Detroit, MI, November 16, 2019.}
-\item \textnormal{\href{https://www.youtube.com/watch?v=6VkSUhsZr40&feature=youtu.be}{``Graduate and Professional School Applications.''} E. M. Leddin. \textbf{Presentation}. \emph{o}STEM Meeting, Denton, TX, September 23, 2019; and UNT NSF-REU Program, Denton, TX, July, 17 2019.}
-  \item \textnormal{\href{http://bit.ly/2019-UNTREU-CCBC}{``Computational Chemistry Bootcamp.''} E. M. Leddin. \textbf{Presentation}. UNT NSF-REU Program, Denton, TX, June 11, 2019.}
-  \item \textnormal{``The LGBTQ+ community in chemistry -- new frontiers for graduate students and postdoctoral scholars.'' \textbf{Panelist}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, April 1, 2019.}
-  \item \textnormal{``The Graduate School Experience: What to Expect'' \textbf{Panelist}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, March 31, 2019.}
-  \item \textnormal{ \href{https://docs.google.com/presentation/d/1mKDUxe-elMQ7EkTBglIQBeZlcsdBwmfP5loLxAsshF0/edit}{``Creating Inclusive Environments.''} E. M. Leddin. \textbf{Presentation}. Alpha Phi Omega D-3 Sectional Conference, Denton, TX, March 2, 2019.}
-  \item \textnormal{``Conflict Resolution.'' E. M. Leddin. \textbf{Presentation}. Alpha Phi Omega D-3 Sectional Conference, Denton, TX, March 2, 2019; and Alpha Phi Omega Section 41 Conference, Sherman, TX, April 14, 2018.}
-  }
-\end{etaremune}
-
 
 %------------SCI COMM-----------------
 \section{Scientific Communication and Outreach Activities}
   \resumeSubHeadingListStart
    \resumeSubItem{Skype-a-Scientist}
       {(2018-present)}
-    \resumeSubItem{oSTEM Mentorship Program (Mentor)}
-      {(2019)}
     \resumeSubItem{Letters to a Pre-Scientist}
       {(2019-present)}
+    \resumeSubItem{oSTEM Mentorship Program (Mentor)}
+      {(2019)}
+    \resumeSubItem{Guest Appearance on \href{https://www.stitcher.com/show/my-fave-queer-chemist/episode/emmett-leddin-university-of-north-texas-69219314}{\emph{My Fave Queer Chemist} Podcast}}
+      {(2020)}%April 29
     \resumeSubItem{Cient\'{i}fico Latino's Graduate Student Mentorship Initiative (Mentor)}
-      {(2020-present)}
+      {(2020)}
     \resumeSubItem{UX Tester and Advisor, ACS Publications Name Change Policy Initiative}
       {(2020)}
   \resumeSubHeadingListEnd
@@ -400,6 +435,10 @@
 %--------PROFESSIONAL DEVELOPMENT COURSEWORK-----------
 \section{Professional Development Coursework}
   \resumeSubHeadingListStart
+    \resumeSubItem{XSEDE HPC Workshop: GPU Programming Using OpenACC\textnormal{,}}
+      {eXtreme Science and Engineering Discovery Environment (March 2021)} % March 2
+    \resumeSubItem{Reclaiming STEM: Diverse and Inclusive Sci-Comm Workshop\textnormal{,}}
+      {Reclaiming STEM (October 2020)}
     \resumeSubItem{AMSA Reproductive Health Scholars Program\textnormal{,}}
       {American Medical Student Association (July 2020)}
       \resumeItemListStart
