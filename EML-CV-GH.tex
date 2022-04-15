@@ -16,12 +16,18 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 
+%% For publication DOIs
+\usepackage{doi}
+\renewcommand{\doitext}{DOI: }
+
 %% Fonts		
 %\usepackage{charter} %% Charter font
-%\usepackage[charter]{mathdesign} %C% harter math (for kappa)
-%\usepackage{sansmathfonts} %% For Computer Modern sans serif
+%\usepackage[charter]{mathdesign} %% Charter math (for kappa)
+\usepackage{sansmathfonts} %% For sans serif math (for kappa)
 \renewcommand{\familydefault}{\sfdefault}	 %% For a sans serif
-\usepackage[scaled=0.94]{helvet} % For Helvetica
+%\usepackage[scaled=0.94]{helvet} %% For Helvetica
+\usepackage{sourcesanspro}
+\usepackage{fontawesome5}
 
 \pagestyle{fancy}
 %% Clear all header and footer fields
@@ -43,6 +49,14 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+%% Tables on hard mode
+%% Make LaTeX accept ragged with a set width for paragraph mode
+\usepackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
 %% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
@@ -61,6 +75,16 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\dissSubheading}[6]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \\
+      \textit{\small#6}
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -93,25 +117,24 @@
 \fancyfoot[R]{Last Updated: \today}
 
 %----------HEADING-----------------
-%% Name and Email
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\Large Emmett M. Leddin}} & Email: \href{mailto:EmmettLeddin@my.unt.edu}{EmmettLeddin@my.unt.edu}\\
-  \\
-\end{tabular*}
-%% Add Address Line
-  \href{https://chemistry.unt.edu}{University of North Texas, Department of Chemistry, 1508 W. Mulberry Street, Denton, TX 76203}
-%% ORCID and GitHub
-  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \href{http://orcid.org/0000-0003-1610-0092}{ORCID: 0000-0003-1610-0092} & \href{https://github.com/emleddin}{GitHub: emleddin}\\
-\end{tabular*}
+%% Name
+\begin{center}
+\LARGE{\textbf{Emmett M. Leddin}}
+\end{center}
 
+%% Email, GitHub, and ORCID
+\begin{tabular*}{\textwidth}[t]{ L{2in}@{\extracolsep{\fill}}C{2in}@{\extracolsep{\fill}}R{2in} }
+\href{mailto:EmmettLeddin@my.unt.edu}{\faEnvelopeOpenText{} EmmettLeddin@my.unt.edu} & \href{https://github.com/emleddin}{\faGithub{} emleddin} & \href{http://orcid.org/0000-0003-1610-0092}{\faOrcid{} 0000-0003-1610-0092}\\
+\end{tabular*}
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \dissSubheading
       {University of North Texas}{Denton, TX}
-      {Ph.D. Candidate in Physical Chemistry}{August 2017 -- Present}
+      {Ph.D. in Physical Chemistry}{August 2017 -- May 2022}
+      {Dissertation: Computational Modeling of Cancer-Related Mutations in DNA Repair Enzymes Using}
+      {Molecular Dynamics and Quantum Mechanics/Molecular Mechanics}
     \eduSubheading
       {Truman State University}{Kirksville, MO}
       {B.S. in Chemistry (ACS Certified)}{August 2013 -- May 2017}
@@ -125,17 +148,29 @@
 
     \resumeSubheading
       {Graduate Research Assistant}{Denton, TX}
-      {University of North Texas}{August 2017 -- Present}
+      {University of North Texas}{August 2017 -- May 2022}
       \resumeItemListStart
         \resumeItem{Advisor\textnormal{:}}
           {Dr. G. Andr\'{e}s Cisneros}
-        \resumeItem{\textnormal{Performed molecular dynamics simulations with DNA polymerase $\kappa$, TET2, HRP, and RdRp}}
+        \resumeItem{\textnormal{Performed molecular dynamics simulations with DNA polymerase $\kappa$, TET2, HRP, RdRp, and POT1}}
           {}
         \resumeItem{\textnormal{Parameterized non-standard nucleic acids and small ligands}}
           {}
-        \resumeItem{\textnormal{Optimized protein complexes using quantum mechanics/molecular mechanics}}
+        \resumeItem{\textnormal{Optimized protein-DNA complexes using quantum mechanics/molecular mechanics}}
           {}
         \resumeItem{\textnormal{Maintained computational resources (15 workstations and over 150 TB of storage) as system administrator}}
+          {}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Graduate Research Assistant}{Los Alamos, NM}
+      {Los Alamos National Laboratory}{August 2020 -- August 2021}
+      \resumeItemListStart
+        \resumeItem{Advisor\textnormal{:}}
+          {Dr. Karissa Sanbonmatsu}
+        \resumeItem{\textnormal{Performed molecular dynamics simulations of RNA riboswitches}}
+          {}
+        \resumeItem{\textnormal{Converted AMBER drug parameters to GROMACS}}
           {}
       \resumeItemListEnd
 
@@ -159,16 +194,31 @@
 \begin{etaremune}
 \small
 %% June 4, 2021
-   \item \href{https://doi.org/10.1021/acs.jctc.1c00313}{Hix, M. A.; Leddin, E. M.; Cisneros, G. A. Combining Evolutionary Conservation and Quantum Topological Analyses to Determine QM Subsystems for Biomolecular QM/MM Simulations.
-\textit{JCTC} [Online early access]. Published Online: June 4, 2021. https://pubs.acs.org/doi/10.1021/acs.jctc.1c00313} 
+    \item Hix, M. A.; Leddin, E. M.; Cisneros, G. A. Combining Evolutionary Conservation and Quantum Topological Analyses to Determine Quantum Mechanics Subsystems for Biomolecular Quantum Mechanics/Molecular Mechanics Simulations. \textit{JCTC} \textbf{2021}, \textit{17}, 4524-4537. \doi{10.1021/acs.jctc.1c00313}
 %% Accepted May 2019
-  \item \href{https://doi.org/10.1016/bs.apcsb.2019.05.002}{Leddin, E. M.; Cisneros, G. A. Comparison of DNA and RNA Substrate Effects on TET2 Structure. In \textit{Advances in Protein Chemistry and Structural Biology};  Karabencheva-Christova, T., Christov, C. Z., Eds.; Academic Press: 2019, pp 91-112.}
+  \item Leddin, E. M.; Cisneros, G. A. Comparison of DNA and RNA Substrate Effects on TET2 Structure. In \textit{Advances in Protein Chemistry and Structural Biology};  Karabencheva-Christova, T., Christov, C. Z., Eds.; Academic Press: 2019, pp 91-112. \doi{10.1016/bs.apcsb.2019.05.002}
 %% Nov 2, 2018
-  \item \href{https://pubs.acs.org/doi/10.1021/acs.biochem.8b00912}{DeNizio, J. E.; Liu, M. Y.; Leddin, E. M.; Cisneros, G. A.; Kohli, R. M. Selectivity and Promiscuity in TET-mediated oxidation of 5-methylcytosine in DNA and RNA. \textit{Biochemistry} \textbf{2019}, \textit{58}, 411-421.}
+  \item DeNizio, J. E.; Liu, M. Y.; Leddin, E. M.; Cisneros, G. A.; Kohli, R. M. Selectivity and Promiscuity in TET-mediated oxidation of 5-methylcytosine in DNA and RNA. \textit{Biochemistry} \textbf{2019}, \textit{58}, 411-421. \doi{10.1021/acs.biochem.8b00912}
 %% July 13, 2018
-  \item \href{https://pubs.acs.org/doi/abs/10.1021/acs.chemrestox.8b00055}{Antczak, N. M.; Walker, A. R.; Stern, H. R.; Leddin, E. M.; Palad, C.; Coulther, T. A.; Swett, R.; Cisneros, G. A.; Beuning, P. J. Characterization of nine cancer-associated variants in human Pol $\kappa$. \textit{Chem. Res. Toxicol.} \textbf{2018}, \textit{31}, 697-711.}
+  \item Antczak, N. M.; Walker, A. R.; Stern, H. R.; Leddin, E. M.; Palad, C.; Coulther, T. A.; Swett, R.; Cisneros, G. A.; Beuning, P. J. Characterization of nine cancer-associated variants in human Pol $\kappa$. \textit{Chem. Res. Toxicol.} \textbf{2018}, \textit{31}, 697-711. \doi{10.1021/acs.chemrestox.8b00055}
 \normalsize
 \end{etaremune}
+
+%--------PUBLICATIONS------------
+\section{Preprints}
+\begin{etaremune}
+\small{
+\item Naseem-Khan, S.; Berger, M. B.; Leddin, E. M.; Maghsoud, Y.; Cisneros, G. A. 
+Impact of Remdesivir Incorporation Along the Primer Strand on SARS-CoV-2 RNA-dependent RNA polymerase.
+ChemRxiv. March 29, 2022. \doi{10.26434/chemrxiv-2022-4s2c7-v2}
+\item Ravishankar, K.; Jiang, X.; Leddin, E. M.; Morcos, F.; Cisneros, G. A.
+Computational Compensatory Mutation Discovery Approach: Predicting a PARP1 Variant Rescue Mutation.
+BioRxiv 2021.11.21.469407 [Preprint]. November 21, 2021. \doi{10.1101/2021.11.21.469407}
+}
+\end{etaremune}
+
+%%----------------PAGE BREAK--------------------
+\newpage
 
 %--------SKILLS-----------
 \section{Technical Computational Skills}
@@ -194,17 +244,6 @@
       {National Institute of General Medical Sciences (2020)}
    \resumeSubItem{Honorable Mention from the Graduate Research Fellowship Program\textnormal{,}}
       {National Science Foundation (2019)}
-  \resumeSubHeadingListEnd      
-
-%% NEW PAGE
-%%----------------PAGE BREAK--------------------
-\newpage
-\fancyfoot[L]{Emmett M. Leddin}
-\fancyfoot[C]{\thepage}
-\fancyfoot[R]{Last Updated: \today}
-
-\section{Awards and Honors, Continued}
-  \resumeSubHeadingListStart
     \resumeSubItem{Outstanding Service and Leadership Award\textnormal{,}}
       {Truman State University Chemistry Department (2017)}
     \resumeSubItem{Distinguished Service Key\textnormal{,}}
@@ -290,27 +329,15 @@
 
 %--------Academic PRESENTATIONS------------
 \section{Academic Presentations}
-\begin{etaremune}[start=15]
+\begin{etaremune}[start=17]
 \small{
+  \item \textnormal{``QM/MM analysis of the reaction of DNA Polymerase $\kappa$.'' E. M. Leddin, G. A. Cisneros. \textbf{Poster}. 263\textsuperscript{rd} American Chemical Society National Meeting \& Exposition, March 22, 2022.}
+  \item \textnormal{``Structural Insights into the Cancer-Related H1881R Variant in TET2.'' E. M. Leddin, H. Torabifard, M. Guillamot, I. Aifantis, G. A. Cisneros. \textbf{Poster}. \href{https://doi.org/10.26226/morressier.616e5c2362ba8657678b1294}{LatinXChem Twitter Conference}, September 20, 2021.}
   \item \textnormal{``How Six Cancer-Related Mutations Affect the
 TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen, P. Camacho, M. Guillamot-Ruano, I. Aifantis, R. M. Kohli, G. A. Cisneros. \textbf{Presentation}. 53\textsuperscript{rd} Annual DFW/ACS Meeting-in-Miniature, May 1, 2021.}
   \item \textnormal{``Impact of various cancer mutants on a TET2-DNA complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen, P. Camacho, M. Guillamot-Ruano, I. Aifantis, R. M. Kohli, G. A. Cisneros. \textbf{Presentation}. 261\textsuperscript{st} American Chemical Society National Meeting \& Exposition, April 14, 2021.}
   \item \textnormal{``Impact of Nucleic Acid Backbone Composition on TET2: A Computational Study.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster, Sci-Mix}. \href{https://www.morressier.com/article/impact-nucleic-acid-backbone-composition-tet2-computational-study/5e735fe0cde2b641284a9da2?}{259\textsuperscript{th} American Chemical Society National Meeting \& Exposition}, March 24, 2020 (hosted online due to COVID-19).}
   \item \textnormal{``Impact of Nucleic Acid Backbone Composition on TET2: A Computational Study.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster}. \href{https://twitter.com/EmLedd1/status/1239679717575360512?s=20}{University of North Texas College of Science Research Day}, March 20, 2020; and \href{https://twitter.com/EmLedd1/status/1234811448720797696?s=20}{Royal Society of Chemistry Twitter Poster Conference}, March 3, 2020.}
-}
-\end{etaremune}
-
-%% NEW PAGE
-%%----------------PAGE BREAK--------------------
-\newpage
-\fancyfoot[L]{Emmett M. Leddin}
-\fancyfoot[C]{\thepage}
-\fancyfoot[R]{Last Updated: \today}
-
-
-\section{Academic Presentations, Continued}
-\begin{etaremune}[start=11]
-\small{
   \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, G. A. Cisneros. \textbf{Presentation}. 52\textsuperscript{nd} Annual DFW/ACS Meeting-in-Miniature, April 27, 2019.}
   \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, April 2, 2019.}
   \item \textnormal{``Computational investigation of single nucleotide polymorphisms in human DNA Polymerase $\kappa$.'' E. M. Leddin, A. R. Walker, N. M. Antczak, H. R. Stern, C. Palad, T. A. Coulther, R. J. Swett, P. J. Beuning, G. A. Cisneros. \textbf{Poster, Sci-Mix}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, April 2, 2019.}
@@ -327,11 +354,39 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
   }
 \end{etaremune}
 
+
+%}
+%\end{etaremune}
+%
+%%%----------------PAGE BREAK--------------------
+%\newpage
+%
+%
+%\section{Academic Presentations, Continued}
+%\begin{etaremune}[start=11]
+%\small{
+
 %--------Service and Outreach PRESENTATIONS------------
 \section{Service and Outreach Presentations}
-\begin{etaremune}[start=15]
+\begin{etaremune}[start=19]
 \small{
+  \item \textnormal{``The Graduate School Experience: What to Expect'' \textbf{Panelist}. 263\textsuperscript{rd} American Chemical Society National Meeting \& Exposition, San Diego, CA, March 20, 2022.}
+  \item \textnormal{\href{http://bit.ly/2021-oSTEM-CLS}{``Chapter Leadership Summit: Conflict Resolution.''} E. M. Leddin, M. Moore. \textbf{Presentation}. 11\textsuperscript{th} Annual oSTEM Conference, online, October 31, 2021.}
+  \item \textnormal{\href{http://bit.ly/2021-oSTEM-RSNL}{``Research Skills for the Newbie in the Lab.''} E. M. Leddin. \textbf{Presentation}. 11\textsuperscript{th} Annual oSTEM Conference, online, October 29, 2021.}
+  \item \textnormal{\href{https://bit.ly/2021-LE-Give-Talk
+}{``How to Give a Talk.''} E. M. Leddin. \textbf{Presentation}. oSTEM Leadership \& Education, July 8, 2021.}
   \item \textnormal{``STEMM in Crisis: Lessons from a Text-Based Hotline.'' E. M. Leddin, S. Huard, A. Bryant, N. Juarez, J. Hong, L. Martinez, K. R. Fox. \textbf{Presentation (Presidential Event)}. \href{https://bit.ly/2021-THRIVE-ACS}{261\textsuperscript{st} American Chemical Society National Meeting \& Exposition}, April 6, 2021.}
+
+  }
+\end{etaremune}  
+
+%%----------------PAGE BREAK--------------------
+\newpage
+
+\section{Service and Outreach Presentations, Continued}
+\begin{etaremune}[start=14]
+\small{
+
 %% American Medical Student Association 71st Annual Convention
   \item \textnormal{``Messages from COVID-19: Operating a Crisis Hotline by People in STEMM with Marginalized Identities'' E. M. Leddin, S. Huard, A. Bryant, N. Juarez, J. Hong, L. Martinez, K. R. Fox. \textbf{Poster}. 26th Annual American Medical Student Association Project, Research, and Experience Exhibition, March 6, 2021.}
   \item \textnormal{``Following the Yellow-Brick Road to... Graduate School???'' E. M. Leddin. \textbf{Presentation}. Lincoln-Way West Community High School, New Lenox, IL, March 3, 2021.}
@@ -345,12 +400,6 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
   \item \textnormal{\href{http://bit.ly/2019-UNTREU-CCBC}{``Computational Chemistry Bootcamp.''} E. M. Leddin. \textbf{Presentation}. UNT NSF-REU Program, Denton, TX, June 11, 2019.}
   \item \textnormal{``The LGBTQ+ community in chemistry -- new frontiers for graduate students and postdoctoral scholars.'' \textbf{Panelist}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, Orlando, FL, April 1, 2019.}
   \item \textnormal{``The Graduate School Experience: What to Expect'' \textbf{Panelist}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, Orlando, FL, March 31, 2019.}
-  }
-\end{etaremune}  
-  
-\section{Service and Outreach Presentations, Continued}
-\begin{etaremune}[start=2]
-\small{
   \item \textnormal{ \href{https://docs.google.com/presentation/d/1mKDUxe-elMQ7EkTBglIQBeZlcsdBwmfP5loLxAsshF0/edit}{``Creating Inclusive Environments.''} E. M. Leddin. \textbf{Presentation}. Alpha Phi Omega D-3 Sectional Conference, Denton, TX, March 2, 2019.}
   \item \textnormal{``Conflict Resolution.'' E. M. Leddin. \textbf{Presentation}. Alpha Phi Omega D-3 Sectional Conference, Denton, TX, March 2, 2019; and Alpha Phi Omega Section 41 Conference, Sherman, TX, April 14, 2018.}
   }
@@ -401,6 +450,14 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
           {Invited outside presenters and implemented an introductory Medical Spanish and Medical American Sign Language phrase of the week at meetings}
       \resumeItemListEnd
 
+  \resumeSubHeadingListEnd
+
+%%----------------PAGE BREAK--------------------
+\newpage
+
+\section{Activities and Professional Organizations, Continued}
+  \resumeSubHeadingListStart
+
     \resumeSubItem{Alpha Phi Omega}
       {Service Fraternity (2014 -- Present)}
             \resumeItemListStart
@@ -426,9 +483,9 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
         \resumeItem{Chapter President\textnormal{:}}
           {Conducted weekly meetings, maintained the organization's email and Twitter accounts, and created advertisements}
         \resumeItem{Graduate Student Networking Chair\textnormal{:}}
-          {Facilitated discussions on graduate and professional school options, lead coding workshops, and built and maintained the \href{https://ostemnorthtexas.github.io/site/index.html}{organization's website}} 
+          {Facilitated discussions on graduate and professional school options, led coding workshops, and built and maintained the \href{https://ostemnorthtexas.github.io/site/index.html}{organization's website}} 
         \resumeItem{Hackathon Participant\textnormal{:}}
-          {Worked with a team of 4 students and 2 professional mentors to develop and pitch a product based on client goals over the course of 48 hours (\href{https://github.com/travigd/NarwhalApp}{2019, first place}; \href{https://github.com/camryn-e/QueersInCrisis}{2020, third place})}
+          {Worked with a team of 4 students and 2 professional mentors to develop and pitch a product based on client goals over the course of 48 hours (\href{https://github.com/travigd/NarwhalApp}{2019, first place}; \href{https://github.com/camryn-e/QueersInCrisis}{2020, third place}; \href{https://github.com/emleddin/AccessApp}{2021, first place})}
       \resumeItemListEnd
 
     \resumeSubItem{Sigma Xi}
@@ -485,6 +542,17 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
 
   \resumeSubHeadingListEnd
 
+%--------LANGUAGES-----------
+\section{Languages}
+  \resumeSubHeadingListStart
+    \resumeSubItem{English:}
+      {Native fluency}
+      \resumeSubItem{German:}
+      {Intermediate speaking, reading, writing, and listening}
+      \resumeSubItem{Spanish:}
+      {Elementary speaking, reading, writing, and listening}
+\resumeSubHeadingListEnd
+
 %--------PROFESSIONAL DEVELOPMENT COURSEWORK-----------
 \section{Professional Development Coursework}
   \resumeSubHeadingListStart
@@ -520,15 +588,5 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
       {Truman State University (January 2015)}
   \resumeSubHeadingListEnd
 
-%--------LANGUAGES-----------
-\section{Languages}
-  \resumeSubHeadingListStart
-    \resumeSubItem{English:}
-      {Native fluency}
-      \resumeSubItem{German:}
-      {Intermediate speaking, reading, writing, and listening}
-      \resumeSubItem{Spanish:}
-      {Elementary speaking, reading, writing, and listening}
-\resumeSubHeadingListEnd
 
 \end{document}
