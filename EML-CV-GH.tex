@@ -70,6 +70,15 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\tworesumeSubheading}[6]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+      \textit{#5} & \textit{#6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\dissSubheading}[5]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{L{5in}@{\extracolsep{\fill}}R{2in}}
@@ -131,6 +140,10 @@
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
+    \eduSubheading
+      {Michigan State University}{East Lansing, MI}
+      {M.D.}{August 2022 -- May 2026}
+      {Certification in Leadership in Medicine for the Underserved}{August 2022 -- May 2026}
     \dissSubheading
       {University of North Texas}{Denton, TX}
       {Ph.D. in Physical Chemistry}{August 2017 -- May 2022}
@@ -146,8 +159,9 @@
 \section{Research Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
+    \tworesumeSubheading
       {Graduate Research Assistant}{Denton, TX}
+      {University of Texas at Dallas}{June 2022 -- August 2022}
       {University of North Texas}{August 2017 -- May 2022}
       \resumeItemListStart
         \positionItem{Advisor}
@@ -183,25 +197,35 @@
 
 %--------PUBLICATIONS------------
 \section{Publications}
-\begin{etaremune}
+\begin{etaremune}[start=7]
+% August 4, 2022 Cancer Discovery
+    \ASAParticle{Yeaton, A.; Cayanan, G.; Loghavi, S.; Dolgalev, I.; \underline{Leddin, E. M.}; Loo, C.; Torabifard, H.; Nicolet, D.; Wang, J.; Corrigan, K.; Paraskevopoulou, V.; Starczynowski, D. T.; Wang, E.; Abdel-Wahab, O.; Viny, A. D.; Stone, R. M.; Byrd, J. C.; Guryanova, O. A.; Kohli, R.; Cisneros, G. A.; Tsirigos, A.; Eisfeld, A.-K.; Aifantis, I.; Guillamot, M.}
+{The Impact of Inflammation-Induced Tumor Plasticity During Myeloid Transformation}{Cancer Discov.}{August 4, 2022}{10.1158/2159-8290.CD-21-1146}
+% May 30, 2022 Biophys J
+    \ASAParticle{Ravishankar, K.; Jiang, X.; \underline{Leddin, E. M.}; Morcos, F.; Cisneros, G. A.}{Computational Compensatory Mutation Discovery Approach: Predicting a PARP1 Variant Rescue Mutation}{Biophys. J.}{May 30, 2022}{10.1016/j.bpj.2022.05.036}
+
+\end{etaremune}
+\section{Publications, Continued}
+\begin{etaremune}[start=5]
+    
 % April 18, 2022 JCIM
-    \ASAParticle{Naseem-Khan, S.; Berger, M. B.; Leddin, E. M.; Maghsoud, Y.; Cisneros, G. A.}{Impact of Remdesivir Incorporation Along the Primer Strand on SARS-CoV-2 RNA-dependent RNA polymerase}{J. Chem. Inf. Model.}{April 18, 2022}{10.1021/acs.jcim.2c00201}
+    \ACSarticle{Naseem-Khan, S.; Berger, M. B.; \underline{Leddin, E. M.}; Maghsoud, Y.; Cisneros, G. A.}{Impact of Remdesivir Incorporation Along the Primer Strand on SARS-CoV-2 RNA-dependent RNA polymerase}{J. Chem. Inf. Model.}{2022}{62}{2456--2465}{10.1021/acs.jcim.2c00201}
 % June 4, 2021 JCTC
-    \ACSarticle{Hix, M. A.; Leddin, E. M.; Cisneros, G. A.}{Combining Evolutionary Conservation and Quantum Topological Analyses to Determine Quantum Mechanics Subsystems for Biomolecular Quantum Mechanics/Molecular Mechanics Simulations}{J. Chem. Theory Comput.}{2021}{17}{4524--4537}{10.1021/acs.jctc.1c00313}
+    \ACSarticle{Hix, M. A.; \underline{Leddin, E. M.}; Cisneros, G. A.}{Combining Evolutionary Conservation and Quantum Topological Analyses to Determine Quantum Mechanics Subsystems for Biomolecular Quantum Mechanics/Molecular Mechanics Simulations}{J. Chem. Theory Comput.}{2021}{17}{4524--4537}{10.1021/acs.jctc.1c00313}
 % Accepted May 11, 2019 Advances in Protein Chemistry and Structural Biology
-    \item Leddin, E. M.; Cisneros, G. A. Comparison of DNA and RNA Substrate Effects on TET2 Structure. In \textit{Adv. Protein Chem. Struct. Biol.};  Karabencheva-Christova, T., Christov, C. Z., Eds.; Academic Press: 2019, pp 91--112. \doi{10.1016/bs.apcsb.2019.05.002}
+    \item \underline{Leddin, E. M.}; Cisneros, G. A. Comparison of DNA and RNA Substrate Effects on TET2 Structure. In \textit{Adv. Protein Chem. Struct. Biol.};  Karabencheva-Christova, T., Christov, C. Z., Eds.; Academic Press: 2019, pp 91--112. \doi{10.1016/bs.apcsb.2019.05.002}
 % Nov 2, 2018
-    \ACSarticle{DeNizio, J. E.; Liu, M. Y.; Leddin, E. M.; Cisneros, G. A.; Kohli, R. M.}{Selectivity and Promiscuity in TET-mediated oxidation of 5-methylcytosine in DNA and RNA}{Biochemistry}{2019}{58}{411--421}{10.1021/acs.biochem.8b00912}
+    \ACSarticle{DeNizio, J. E.; Liu, M. Y.; \underline{Leddin, E. M.}; Cisneros, G. A.; Kohli, R. M.}{Selectivity and Promiscuity in TET-mediated oxidation of 5-methylcytosine in DNA and RNA}{Biochemistry}{2019}{58}{411--421}{10.1021/acs.biochem.8b00912}
 % July 13, 2018
-    \ACSarticle{Antczak, N. M.; Walker, A. R.; Stern, H. R.; Leddin, E. M.; Palad, C.; Coulther, T. A.; Swett, R.; Cisneros, G. A.; Beuning, P. J.}{Characterization of nine cancer-associated variants in human Pol $\kappa$}{Chem. Res. Toxicol.}{2018}{31}{697--711}{10.1021/acs.chemrestox.8b00055}
+    \ACSarticle{Antczak, N. M.; Walker, A. R.; Stern, H. R.; \underline{Leddin, E. M.}; Palad, C.; Coulther, T. A.; Swett, R.; Cisneros, G. A.; Beuning, P. J.}{Characterization of nine cancer-associated variants in human Pol $\kappa$}{Chem. Res. Toxicol.}{2018}{31}{697--711}{10.1021/acs.chemrestox.8b00055}
 \end{etaremune}
 
 %--------PUBLICATIONS------------
 \section{Preprints}
 \begin{etaremune}
-\item Ravishankar, K.; Jiang, X.; Leddin, E. M.; Morcos, F.; Cisneros, G. A.
-Computational Compensatory Mutation Discovery Approach: Predicting a PARP1 Variant Rescue Mutation.
-BioRxiv 2021.11.21.469407 [Preprint]. April 18, 2022. \doi{10.1101/2021.11.21.469407}
+\item Simonin-Wilmer, I.; Ossio, R.; \underline{Leddin, E. M.}; Harland, M.; Pooley, K.; Martil de la Garza, M.; Obolenski, S.; Hewinson, J.; Wong, C. C.; Iyer, V.; Taylor, J. C.; Newton-Bishop, J. A.; Bishop, D. T.; Cisneros, G. A.; Iles, M. M.; Adams, D. J.; Robles-Espinoza, C. D.
+Population-based analysis of \emph{POT1} variants in a cutaneous melanoma case-control cohort.
+medRxiv 2022.05.16.22274971 [Preprint]. May 19, 2022. \doi{10.1101/2022.05.16.22274971}
 \end{etaremune}
 
 %%%----------------PAGE BREAK--------------------
@@ -219,6 +243,10 @@ BioRxiv 2021.11.21.469407 [Preprint]. April 18, 2022. \doi{10.1101/2021.11.21.46
 %-----------AWARDS AND HONORS-----------------
 \section{Awards and Honors}
   \resumeSubHeadingListStart
+   \commaSubItem{Toulouse Dissertation Award in Physical Sciences}
+      {University of North Texas Toulouse Graduate School (2022)}
+   \commaSubItem{Dr. Burl Gordon Rogers Academic Excellence Award}
+      {University of North Texas College of Science (2022)}
    \commaSubItem{Golden Eagle Award}
       {University of North Texas (2022)}
    \commaSubItem{James J. and Ruth I. Spurlock Scholarship}
@@ -236,6 +264,8 @@ BioRxiv 2021.11.21.469407 [Preprint]. April 18, 2022. \doi{10.1101/2021.11.21.46
     \commaSubItem{Outstanding Service and Leadership Award}
       {Truman State University Chemistry Department (2017)}
     \commaSubItem{Distinguished Service Key}
+      {Alpha Phi Omega - Epsilon Chapter (2017)}
+    \commaSubItem{Murfin Plaid Award}
       {Alpha Phi Omega - Epsilon Chapter (2017)}
     \commaSubItem{Gold Sash Award}
       {Alpha Phi Omega - Epsilon Chapter (2016)}
@@ -280,11 +310,11 @@ BioRxiv 2021.11.21.469407 [Preprint]. April 18, 2022. \doi{10.1101/2021.11.21.46
         \descriptionItem{Graded laboratory quizzes}
       \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
-%%----------------PAGE BREAK--------------------
-\newpage
-\section{Professional Experience, Continued}
-  \resumeSubHeadingListStart
+%  \resumeSubHeadingListEnd
+%%%----------------PAGE BREAK--------------------
+%\newpage
+%\section{Professional Experience, Continued}
+%  \resumeSubHeadingListStart
 
     \resumeSubheading
       {Academic Trainer}{Kirksville, MO}
@@ -317,6 +347,13 @@ BioRxiv 2021.11.21.469407 [Preprint]. April 18, 2022. \doi{10.1101/2021.11.21.46
 TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen, P. Camacho, M. Guillamot-Ruano, I. Aifantis, R. M. Kohli, G. A. Cisneros. \textbf{Presentation}. 53\textsuperscript{rd} Annual DFW/ACS Meeting-in-Miniature, May 1, 2021.}
   \item \textnormal{``Impact of various cancer mutants on a TET2-DNA complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen, P. Camacho, M. Guillamot-Ruano, I. Aifantis, R. M. Kohli, G. A. Cisneros. \textbf{Presentation}. 261\textsuperscript{st} American Chemical Society National Meeting \& Exposition, April 14, 2021.}
   \item \textnormal{``Impact of Nucleic Acid Backbone Composition on TET2: A Computational Study.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster, Sci-Mix}. \href{https://www.morressier.com/article/impact-nucleic-acid-backbone-composition-tet2-computational-study/5e735fe0cde2b641284a9da2?}{259\textsuperscript{th} American Chemical Society National Meeting \& Exposition}, March 24, 2020 (hosted online due to COVID-19).}
+
+\end{etaremune}
+%%----------------PAGE BREAK--------------------
+\newpage
+\section{Academic Presentations, Continued}
+\begin{etaremune}[start=12]
+
   \item \textnormal{``Impact of Nucleic Acid Backbone Composition on TET2: A Computational Study.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster}. \href{https://twitter.com/EmLedd1/status/1239679717575360512?s=20}{University of North Texas College of Science Research Day}, March 20, 2020; and \href{https://twitter.com/EmLedd1/status/1234811448720797696?s=20}{Royal Society of Chemistry Twitter Poster Conference}, March 3, 2020.}
   \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, G. A. Cisneros. \textbf{Presentation}. 52\textsuperscript{nd} Annual DFW/ACS Meeting-in-Miniature, April 27, 2019.}
   \item \textnormal{``Computational investigation of TET2 activity on RNA-containing substrates.'' E. M. Leddin, J. E. DeNizio, M. Y. Liu, R. M. Kohli, G. A. Cisneros. \textbf{Poster}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, April 2, 2019.}
@@ -327,13 +364,6 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
   \item \textnormal{``Computational investigation of the impact of an RNA base in a TET2-DNA complex.'' E. M. Leddin, G. A. Cisneros. \textbf{Poster}. 8\textsuperscript{th} Annual oSTEM Conference, Houston, TX, November 17, 2018; and NSF CAC Fall IAB Meeting, Denton, TX, October 22, 2018.}
 %  \item \textnormal{``Computational investigation of cancer-related single nucleotide polymorphisms in TET2.'' P. Camacho, E. M. Leddin, G. A. Cisneros. \textbf{Poster}. SACNAS Conference, San Antonio, TX, October 11, 2018.}
   \item \textnormal{``Virtual screening of potential inhibitors of APOBEC3B: A promising cancer drug target.'' Z. D. Smith, E. M. Leddin, B. R. Miller III. \textbf{Poster}. ACS Midwest Regional Meeting, Lawrence, KS, October 19, 2017; and MERCURY Conference, Greenville, SC, July 21, 2017.}
-
-\end{etaremune}
-%%----------------PAGE BREAK--------------------
-\newpage
-\section{Academic Presentations, Continued}
-\begin{etaremune}[start=4]
-
   \item \textnormal{``Campus climate for the LGBTQ+ community at Truman State University.'' E. M. Leddin, T. Palmer. \textbf{Poster}. Psychology Capstone Presentation at Truman State University, May 2, 2017.}
   \item \textnormal{``Computational analysis of the movement and inhibition of APOBEC3B.'' E. M. Leddin, B. R. Milller III. \textbf{Presentation}. Truman State University Student Research Conference, April 20, 2017; and National Conference on Undergraduate Research, Memphis, TN, April 8, 2017.}
   \item \textnormal{``Do you believe in the power of entropy?'' E. M. Leddin, J. M. McCormick. \textbf{Presentation}. Truman State University Student Research Conference, April 20, 2017.}
@@ -354,6 +384,13 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
 %% American Medical Student Association 71st Annual Convention
   \item \textnormal{``Messages from COVID-19: Operating a Crisis Hotline by People in STEMM with Marginalized Identities'' E. M. Leddin, S. Huard, A. Bryant, N. Juarez, J. Hong, L. Martinez, K. R. Fox. \textbf{Poster}. 26th Annual American Medical Student Association Project, Research, and Experience Exhibition, March 6, 2021.}
   \item \textnormal{``Following the Yellow-Brick Road to... Graduate School???'' E. M. Leddin. \textbf{Presentation}. Lincoln-Way West Community High School, New Lenox, IL, March 3, 2021.}
+
+\end{etaremune}
+%%----------------PAGE BREAK--------------------
+\newpage
+\section{Service and Outreach Presentations, Continued}
+\begin{etaremune}[start=12]
+
   \item \textnormal{\href{https://twitter.com/ThriveLifeline/status/1366720589130592259?s=20}{``We're Out Here THRIVE-ing: Addressing Mental Health in STEMM.''} E. M. Leddin, S. Huard, A. Bryant, N. Juarez, J. Hong, L. Martinez, K. R. Fox. \textbf{Poster}. Royal Society of Chemistry Twitter Poster Conference, March 2, 2021.}
   \item \textnormal{\href{https://bit.ly/2020-oSTEM-Ethics}{``Mental Health Interventions for People in STEMM with Marginalized Identities.''} K. R. Fox, S. Huard, E. M. Leddin, L. Martinez, A. Bryant, N. Juarez. \textbf{Poster}. 101\textsuperscript{st} Annual Meeting of the American Meteorological Society, Online, January 14, 2020.}
   \item \textnormal{\href{https://bit.ly/2020-oSTEM-Ethics}{``Scientific Ethics: How Sex Research, Standardized Testing, and Gifted Programs Are All Tied to Eugenics.''} E. M. Leddin. \textbf{Presentation}. 10\textsuperscript{th} Annual oSTEM + NOGLSTP's Out to Innovate\texttrademark{} Conference, Online, November 14, 2020.}
@@ -363,13 +400,6 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
 \item \textnormal{\href{https://www.youtube.com/watch?v=6VkSUhsZr40&feature=youtu.be}{``Graduate and Professional School Applications.''} E. M. Leddin. \textbf{Presentation}. oSTEM Meeting, Denton, TX, September 23, 2019; and UNT NSF-REU Program, Denton, TX, July, 17 2019.}
   \item \textnormal{\href{http://bit.ly/2019-UNTREU-CCBC}{``Computational Chemistry Bootcamp.''} E. M. Leddin. \textbf{Presentation}. UNT NSF-REU Program, Denton, TX, June 11, 2019.}
   \item \textnormal{``The LGBTQ+ community in chemistry -- new frontiers for graduate students and postdoctoral scholars.'' \textbf{Panelist}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, Orlando, FL, April 1, 2019.}
-
-\end{etaremune}
-%%----------------PAGE BREAK--------------------
-\newpage
-\section{Service and Outreach Presentations, Continued}
-\begin{etaremune}[start=3]
-
   \item \textnormal{``The Graduate School Experience: What to Expect.'' \textbf{Panelist}. 257\textsuperscript{th} American Chemical Society National Meeting \& Exposition, Orlando, FL, March 31, 2019.}
   \item \textnormal{ \href{https://docs.google.com/presentation/d/1mKDUxe-elMQ7EkTBglIQBeZlcsdBwmfP5loLxAsshF0/edit}{``Creating Inclusive Environments.''} E. M. Leddin. \textbf{Presentation}. Alpha Phi Omega D-3 Sectional Conference, Denton, TX, March 2, 2019.}
   \item \textnormal{``Conflict Resolution.'' E. M. Leddin. \textbf{Presentation}. Alpha Phi Omega D-3 Sectional Conference, Denton, TX, March 2, 2019; and Alpha Phi Omega Section 41 Conference, Sherman, TX, April 14, 2018.}
@@ -378,14 +408,14 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
 %------------SCI COMM-----------------
 \section{Scientific Communication and Outreach Activities}
   \resumeSubHeadingListStart
+    \resumeSubItem{Cient\'{i}fico Latino's Graduate Student Mentorship Initiative (Mentor)}
+      {(2020 -- 2022)}
+    \resumeSubItem{Letters to a Pre-Scientist}
+      {(2019 -- 2022)}
+   \resumeSubItem{Skype-a-Scientist}
+      {(2018 -- 2022)}
     \resumeSubItem{Peer Reviewer, \emph{Journal of Molecular Graphics and Modelling}}
       {(2021)}
-    \resumeSubItem{Cient\'{i}fico Latino's Graduate Student Mentorship Initiative (Mentor)}
-      {(2020 -- Present)}
-    \resumeSubItem{Letters to a Pre-Scientist}
-      {(2019 -- Present)}
-   \resumeSubItem{Skype-a-Scientist}
-      {(2018 -- Present)}
     \resumeSubItem{UX Tester and Advisor, ACS Publications Name Change Policy Initiative}
       {(2020)}
 %% April 29, 2020
@@ -394,17 +424,6 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
     \resumeSubItem{oSTEM Mentorship Program (Mentor)}
       {(2019)}
   \resumeSubHeadingListEnd
-
-%--------LANGUAGES-----------
-\section{Languages}
-  \resumeSubHeadingListStart
-    \positionSubItem{English}
-      {Native fluency}
-    \positionSubItem{German}
-      {Intermediate speaking, reading, writing, and listening}
-    \positionSubItem{Spanish}
-      {Elementary speaking, reading, writing, and listening}
-\resumeSubHeadingListEnd
 
 %--------ACTIVITIES-----------
 \section{Activities and Professional Organizations}
@@ -421,6 +440,12 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
         \positionItem{Musical Demo Show Co-Chair}
           {Coordinated the 2016 Musical Demo Show, an annual event for young children which sets chemical demonstrations to music}
       \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+%%----------------PAGE BREAK--------------------
+\newpage
+\section{Activities and Professional Organizations, Continued}
+  \resumeSubHeadingListStart
 
     \resumeSubItem{American Medical Student Association}
       {(2013 -- 2017)}
@@ -445,12 +470,6 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
         \positionItem{Section Staff}
           {Communicated between the National Office and local chapters and assisted in extension efforts}
       \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-%%----------------PAGE BREAK--------------------
-\newpage
-\section{Activities and Professional Organizations, Continued}
-  \resumeSubHeadingListStart
 
    \resumeSubItem{Out in Science, Technology, Engineering, and Mathematics (oSTEM)}
       {(2018 -- Present)}
@@ -496,6 +515,11 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
         \descriptionItem{Counseled clients experiencing suicidal ideation, depression, stress, abuse, and more}
       \resumeItemListEnd
 
+  \resumeSubHeadingListEnd
+%-----------VOLUNTEER EXPERIENCE-----------------
+\section{Volunteer Experience, Continued}
+  \resumeSubHeadingListStart
+
     \resumeSubheading
       {Crisis Hotline Volunteer}{Kirksville, MO}
       {Victim Support Services}{August 2014 -- May 2017}
@@ -526,14 +550,14 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
       {Reclaiming STEM (October 2020)}
     \commaSubItem{AMSA Reproductive Health Scholars Program}
       {American Medical Student Association (July 2020)}
-      \resumeItemListStart
-      \descriptionSubItem{Final project: \href{https://queeringreproduction.com}{Queering Reproduction}, reproductive healthcare training with a transgender and non-binary focus (ongoing)}
-       \resumeItemListEnd
+%      \resumeItemListStart
+%      \descriptionSubItem{Final project: \href{https://queeringreproduction.com}{Queering Reproduction}, reproductive healthcare training with a transgender and non-binary focus (ongoing)}
+%       \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
-%--------PROFESSIONAL DEVELOPMENT COURSEWORK-----------
-\section{Professional Development Coursework, Continued}
-  \resumeSubHeadingListStart
+%  \resumeSubHeadingListEnd
+%%--------PROFESSIONAL DEVELOPMENT COURSEWORK-----------
+%\section{Professional Development Coursework, Continued}
+%  \resumeSubHeadingListStart
 
     \commaSubItem{Mental Health First Aid Certification}
       {National Council for Behavioral Health (May 2020)}
@@ -555,5 +579,15 @@ TET2-DNA Complex.'' E. M. Leddin, H. Torabifard, P. Silvestrov, K. Shei, C. Shen
       {Truman State University (January 2015)}
   \resumeSubHeadingListEnd
 
+%--------LANGUAGES-----------
+\section{Languages}
+  \resumeSubHeadingListStart
+    \positionSubItem{English}
+      {Native fluency}
+    \positionSubItem{German}
+      {Intermediate speaking, reading, writing, and listening}
+    \positionSubItem{Spanish}
+      {Elementary speaking, reading, writing, and listening}
+\resumeSubHeadingListEnd
 
 \end{document}
